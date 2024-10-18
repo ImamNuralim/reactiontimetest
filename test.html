@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendeteksi Kelelahan Kerja</title>
+    <!-- ==== STYLE.CSS ==== -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- ====  REMIXICON CDN ==== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet" />
+    <!-- ==== ANIMATE ON SCROLL CSS CDN  ==== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ==== HEADER ==== -->
+    <header class="container header">
+      <!-- ==== NAVBAR ==== -->
+      <nav class="nav">
+        <div class="logo">
+          <h2>Website Pendeteksi Kelelahan Kerja</h2>
+        </div>
+        <div class="nav_menu" id="nav_menu">
+          <button class="close_btn" id="close_btn">
+            <i class="ri-close-fill"></i>
+          </button>
+          <ul class="nav_menu_list">
+            <li class="nav_menu_item">
+              <a href="/index.html" class="nav_menu_link">Docs.</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="/test.html" class="nav_menu_link">Test</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <button class="toggle_btn" id="toggle_btn">
+          <i class="ri-menu-line"></i>
+        </button>
+      </nav>
+    </header>
+    <section class="card">
+      <div class="card">
+        <div class="clickarea">
+          <p class="message">Website Pendeteksi Kelelahan Kerja</p>
+          <p class="note">Saat kotak merah berubah menjadi hijau, klik secepat
+            mungkin.<br />Klik dimana saja untuk mulai.</p>
+        </div>
+      </div>
+
+      <audio id="audio-normal" src="voice/normal.mp3"></audio>
+      <audio id="audio-kelelahan-ringan" src="voice/ringan.mp3"></audio>
+      <audio id="audio-kelelahan-sedang" src="voice/sedang.mp3"></audio>
+      <audio id="audio-kelelahan-berat" src="voice/berat.mp3"></audio>
+    </section>
+    <!-- ==== ANIMATE ON SCROLL JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ==== GSAP CDN ==== -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- ==== SCRIPT.JS ==== -->
+    <script src="./js/index.js" defer></script>
+  </body>
+
+</html>
