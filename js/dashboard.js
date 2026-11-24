@@ -52,13 +52,13 @@
     const teamAvg = tested.length ? Math.round(mean(tested.map((r) => r.avg))) : null;
     const attention = tested.filter((r) => r.kategori === 'Kelelahan Sedang' || r.kategori === 'Kelelahan Berat').length;
     const cards = [
-      ['Total pekerja', WORKERS.length],
-      ['Sudah tes', `${tested.length}/${WORKERS.length}`],
-      ['Rata-rata tim', teamAvg === null ? '-' : `${teamAvg} ms`],
-      ['Perlu perhatian', attention],
+      ['Total pekerja', WORKERS.length, 'ri-team-line'],
+      ['Sudah tes', `${tested.length}/${WORKERS.length}`, 'ri-checkbox-circle-line'],
+      ['Rata-rata tim', teamAvg === null ? '-' : `${teamAvg} ms`, 'ri-timer-line'],
+      ['Perlu perhatian', attention, 'ri-alarm-warning-line'],
     ];
-    $('#stats').innerHTML = cards.map(([label, val]) =>
-      `<div class="stat"><span>${label}</span><strong>${val}</strong></div>`
+    $('#stats').innerHTML = cards.map(([label, val, icon]) =>
+      `<div class="stat"><i class="${icon}"></i><div><span>${label}</span><strong>${val}</strong></div></div>`
     ).join('');
   }
 
@@ -71,7 +71,7 @@
         <td>${esc(w.shift)}</td>
         <td>${r ? fmtDate(r.tanggal) : '<span class="muted">Belum tes</span>'}</td>
         <td>${r ? r.avg + ' ms' : '-'}</td>
-        <td>${r ? `<span class="tag ${CATEGORIES[r.kategori].cls}">${esc(r.kategori)}</span>` : '-'}</td>
+        <td>${r ? `<span class="badge ${CATEGORIES[r.kategori].cls}">${esc(r.kategori)}</span>` : '-'}</td>
       </tr>`;
     }).join('');
   }
@@ -102,7 +102,7 @@
       .map((x) => `<li>
         <span>${fmtDate(x.tanggal)}</span>
         <span>${x.avg} ms</span>
-        <span class="tag ${CATEGORIES[x.kategori].cls}">${esc(x.kategori)}</span>
+        <span class="badge ${CATEGORIES[x.kategori].cls}">${esc(x.kategori)}</span>
       </li>`).join('');
 
     el.innerHTML = `
@@ -111,12 +111,12 @@
           <h2>${esc(w.nama)}</h2>
           <p class="muted">${esc(w.divisi)} · Shift ${esc(w.shift)}</p>
         </div>
-        <span class="tag ${c.cls}">${esc(r.kategori)}</span>
+        <span class="badge ${c.cls}">${esc(r.kategori)}</span>
       </div>
 
-      <div class="big"><strong>${r.avg}</strong><span>ms rata-rata (15 percobaan terhitung)</span></div>
+      <div class="big-score"><strong>${r.avg}</strong><span>ms rata-rata (15 percobaan terhitung)</span></div>
 
-      <div class="verdict">
+      <div class="conclusion">
         <h3>Kesimpulan</h3>
         <p>${esc(c.arti)}</p>
         <p><strong>Saran:</strong> ${esc(c.saran)}</p>
@@ -168,8 +168,8 @@
     const c = CATEGORIES[r.kategori];
     box.innerHTML = `
       <h3>Hasil terakhir</h3>
-      <div class="big"><strong>${r.avg}</strong><span>ms rata-rata</span></div>
-      <span class="tag ${c.cls}">${esc(r.kategori)}</span>
+      <div class="big-score"><strong>${r.avg}</strong><span>ms rata-rata</span></div>
+      <span class="badge ${c.cls}">${esc(r.kategori)}</span>
       <p class="conclusion-text">${esc(c.saran)}</p>
       <p class="muted small">${fmtDate(r.tanggal)} · Data sudah masuk ke dashboard admin.</p>`;
   }
