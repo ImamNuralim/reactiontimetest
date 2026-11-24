@@ -1,150 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pendeteksi Kelelahan Kerja</title>
-
-    <!-- ==== STYLE.CSS ==== -->
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <!-- ====  REMIXICON CDN ==== -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-
-    <!-- ==== ANIMATE ON SCROLL CSS CDN  ==== -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>reactimetestihsan · Pendeteksi Kelelahan Kerja</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
   </head>
   <body>
-    
-    <!-- ==== HEADER ==== -->
-    <header class="container header">
-      <!-- ==== NAVBAR ==== -->
-      <nav class="nav">
-        <div class="logo">
-          <h2>Website Pendeteksi Kelelahan Kerja</h2>
-        </div>
-
-        <div class="nav_menu" id="nav_menu">
-          <button class="close_btn" id="close_btn">
-            <i class="ri-close-fill"></i>
-          </button>
-
-          <ul class="nav_menu_list">
-            <li class="nav_menu_item">
-              <a href="#" class="nav_menu_link">Docs.</a>
-            </li>
-            <li class="nav_menu_item">
-              <a href="/test.html" class="nav_menu_link">Test</a>
-            </li>
-            
-          </ul>
-        </div>
-
-        <button class="toggle_btn" id="toggle_btn">
-          <i class="ri-menu-line"></i>
-        </button>
+    <header class="topbar">
+      <a href="./" class="brand"><span class="brand-mark"><i class="ri-pulse-line"></i></span>reactimetestihsan</a>
+      <nav class="nav-links">
+        <a href="#tentang">Tentang</a>
+        <a href="#cara-kerja">Cara kerja</a>
+        <a href="#kategori">Kategori</a>
+        <a href="dashboard/" class="btn btn-small">Buka Dashboard</a>
       </nav>
     </header>
 
-    <section class="wrapper">
-      <div class="background">
-      <img src="img/lelah.jpg" alt="">
-    </div>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"><img src="img/lelah.jpg" alt="" /></div>
+      <div class="container hero-inner">
+        <span class="eyebrow">Prototype · Keselamatan kerja</span>
+        <h1>Kenali kelelahan kerja <span>sebelum berisiko.</span></h1>
+        <p class="lead">
+          reactimetestihsan mengukur waktu reaksi pekerja lewat tes singkat 20 percobaan, lalu memberi
+          kategori kelelahan dan saran tindak lanjut. Supervisor bisa memantau hasilnya langsung dari dashboard.
+        </p>
+        <div class="cta">
+          <a href="dashboard/#admin" class="btn btn-primary"><i class="ri-dashboard-line"></i> Buka Dashboard</a>
+          <a href="dashboard/#pekerja" class="btn btn-ghost"><i class="ri-cursor-line"></i> Coba sebagai pekerja</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="section">
       <div class="container">
-        <div class="grid-cols-2">
-          <div class="grid-item-1">
-            <h1 class="main-heading">
-              Selamat Datang di <span> <br>Website Pendeteksi Kelelahan Kerja</span>
-              <br />
-            </h1>
-            <p class="info-text">
-             Test kefokusan <br>demi keselamatan bersama.
+        <div class="section-head">
+          <h2>Kenapa ini penting</h2>
+          <p>Kelelahan sering tidak disadari, padahal ia menurunkan fokus dan memperlambat reaksi.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <i class="ri-eye-off-line"></i>
+            <h3>Sering tidak disadari</h3>
+            <p>Pekerja merasa "masih oke" padahal kemampuan reaksinya sudah turun.</p>
+          </article>
+          <article class="feature">
+            <i class="ri-flashlight-line"></i>
+            <h3>Reaksi jadi tolok ukur</h3>
+            <p>Waktu reaksi adalah indikator sederhana dan objektif untuk melihat kondisi fokus saat ini.</p>
+          </article>
+          <article class="feature">
+            <i class="ri-shield-check-line"></i>
+            <h3>Deteksi dini</h3>
+            <p>Hasil membantu supervisor memutuskan rotasi atau istirahat sebelum terjadi kecelakaan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARA KERJA -->
+    <section id="cara-kerja" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Cara kerja</h2>
+          <p>Empat langkah dari tes sampai kesimpulan.</p>
+        </div>
+        <ol class="steps">
+          <li><span>1</span><h3>Pilih nama</h3><p>Pekerja memilih namanya di tab Pekerja.</p></li>
+          <li><span>2</span><h3>Tunggu hijau</h3><p>Area berwarna merah. Klik secepat mungkin saat berubah hijau.</p></li>
+          <li><span>3</span><h3>20 percobaan</h3><p>5 percobaan pertama adalah latihan dan tidak dihitung.</p></li>
+          <li><span>4</span><h3>Kesimpulan</h3><p>Sistem menghitung rata-rata dan kategori. Admin langsung melihat hasilnya.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PERAN -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Dua peran di dashboard</h2>
+          <p>Prototype ini belum memakai login. Peran dipilih langsung lewat tab di dashboard.</p>
+        </div>
+        <div class="role-grid">
+          <article class="role-card">
+            <span class="role-icon"><i class="ri-user-3-line"></i></span>
+            <h3>Pekerja</h3>
+            <ul>
+              <li>Memilih nama dan menjalankan tes waktu reaksi</li>
+              <li>Melihat hasil dan saran setelah tes selesai</li>
+            </ul>
+          </article>
+          <article class="role-card">
+            <span class="role-icon"><i class="ri-admin-line"></i></span>
+            <h3>Admin</h3>
+            <ul>
+              <li>Memantau status tes seluruh pekerja</li>
+              <li>Preview waktu reaksi, kesimpulan, dan riwayat per pekerja</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- KATEGORI -->
+    <section id="kategori" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Kategori hasil</h2>
+          <p>Berdasarkan rata-rata waktu reaksi dari 15 percobaan yang dihitung.</p>
+        </div>
+        <div class="table-wrap card">
+          <table class="table">
+            <thead>
+              <tr><th>Kategori</th><th>Rata-rata waktu reaksi</th><th>Arti</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="badge normal">Normal</span></td><td>150–240 ms</td><td>Kondisi reaksi baik</td></tr>
+              <tr><td><span class="badge ringan">Kelelahan Ringan</span></td><td>241–410 ms</td><td>Tanda awal kelelahan</td></tr>
+              <tr><td><span class="badge sedang">Kelelahan Sedang</span></td><td>411–580 ms</td><td>Fokus mulai terpengaruh</td></tr>
+              <tr><td><span class="badge berat">Kelelahan Berat</span></td><td>&gt; 580 ms</td><td>Risiko kecelakaan meningkat</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATATAN -->
+    <section class="section">
+      <div class="container">
+        <div class="note-box">
+          <i class="ri-information-line"></i>
+          <div>
+            <h3>Catatan prototype</h3>
+            <p>
+              Data pekerja masih dummy dan disimpan di browser. Tidak ada login.
+              Hasil tes ini adalah skrining sederhana, <strong>bukan diagnosis medis</strong>.
+              Ambang kategori perlu divalidasi sebelum dipakai untuk keputusan kerja.
             </p>
-
-            <br>
-            <br>
-            <br>
-          </div>
-          <div class="grid-item-2">
-            
           </div>
         </div>
       </div>
     </section>
 
-    
-    <section class="wrapper">
-      <div class="container" data-aos="fade-up" data-aos-duration="1000">
-        <div class="grid-cols-2 padding-grid">
-          <div class="grid-col-item">
-            <div class="icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"
-                />
-            </div>
-            <div class="featured_info">
-              <span>Tujuan</span>
-              <p>
-                <ul>
-                  <li>
-                    <p>Website ini bertujuan untuk membantu pengguna meningkatkan kesadaran dan keterampilan reaksi melalui latihan interaktif yang memungkinkan mengukur dan melacak kemampuan respons cepat secara objektif.</p>
-                  </li>
-                </ul>
-              </p>
-            </div>
-          </div>
-          <div class="grid-col-item">
-            <div class="icon">
-              
-                
-                <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-              </svg>
-            </div>
-            <div class="featured_info">
-              <span>Keterangan Warna Test</span>
-              <p>Normal = Warna Hijau </p>
-              <p>Kelahan Ringan = Warna Biru </p>
-              <p>Kelahan Sedang = Warna Kuning</p>
-              <p>Kelahan Berat = Warna Merah</p>
-            </div>
-          </div>
-          </div>
-        </div>
+    <footer class="footer">
+      <div class="container">
+        <span>reactimetestihsan · Prototype</span>
+        <a href="dashboard/">Dashboard</a>
       </div>
-    </section>
-
-    <footer></footer>
-
-    <!-- ==== ANIMATE ON SCROLL JS CDN -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- ==== GSAP CDN ==== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <!-- ==== SCRIPT.JS ==== -->
-    <script src="./js/script.js" defer></script>
+    </footer>
   </body>
 </html>
