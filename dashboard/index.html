@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard · reactimetestihsan</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="app">
+    <header class="topbar">
+      <a href="../" class="wordmark">reactimetestihsan</a>
+
+      <div class="tabs" role="tablist" aria-label="Pilih peran">
+        <button class="role-btn" data-role="admin" role="tab">Admin</button>
+        <button class="role-btn" data-role="pekerja" role="tab">Pekerja</button>
+      </div>
+
+      <button class="text-btn" id="resetBtn">Reset data dummy</button>
+    </header>
+
+    <main class="wrap">
+      <!-- ===== ADMIN ===== -->
+      <section id="view-admin" hidden>
+        <div class="page-head">
+          <div>
+            <h1>Monitoring kelelahan</h1>
+            <p>Pilih nama untuk melihat grafik, kesimpulan, dan riwayat.</p>
+          </div>
+        </div>
+
+        <div class="stats" id="stats"></div>
+
+        <div class="admin-grid">
+          <div>
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Nama</th><th>Divisi</th><th>Shift</th>
+                    <th>Tes terakhir</th><th>Rata-rata</th><th>Kategori</th>
+                  </tr>
+                </thead>
+                <tbody id="workerRows"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <aside class="panel preview" id="preview"></aside>
+        </div>
+      </section>
+
+      <!-- ===== PEKERJA ===== -->
+      <section id="view-pekerja" hidden>
+        <div class="page-head">
+          <div>
+            <h1>Tes waktu reaksi</h1>
+            <p>Pilih nama, lalu klik area setiap kali warna berubah hijau.</p>
+          </div>
+        </div>
+
+        <div class="pekerja-grid">
+          <div class="panel">
+            <label class="field">
+              <span>Saya adalah</span>
+              <select id="workerSelect"></select>
+            </label>
+
+            <div id="arena" class="arena state-idle">
+              <p class="arena-msg" id="msg"></p>
+              <p class="arena-note" id="note"></p>
+            </div>
+
+            <div class="progress"><div id="bar"></div></div>
+            <p id="progressText"></p>
+          </div>
+
+          <aside class="panel" id="myResult"></aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Audio hasil tes -->
+    <audio id="audio-normal" src="../voice/normal.mp3" preload="auto"></audio>
+    <audio id="audio-kelelahan-ringan" src="../voice/ringan.mp3" preload="auto"></audio>
+    <audio id="audio-kelelahan-sedang" src="../voice/sedang.mp3" preload="auto"></audio>
+    <audio id="audio-kelelahan-berat" src="../voice/berat.mp3" preload="auto"></audio>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>
