@@ -3,6 +3,6 @@
     "@fortawesome/fontawesome-svg-core": "^6.5.1"
   },
   "scripts": {
-    "start": "node server.js"
+    "dev": "node server.js"
   }
 }
